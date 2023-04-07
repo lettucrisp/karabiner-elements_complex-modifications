@@ -2,9 +2,10 @@
   "title": "ACK05 Custom",
   "rules": [
     {
-      "description": "K1",
+      "description": "ACK05 Keys",
       "manipulators": [
         {
+          "description": "K1",
           "type": "basic",
           "from": {
             "modifiers": {
@@ -30,13 +31,9 @@
               ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "description": "K2",
-      "manipulators": [
+        },
         {
+          "description": "K2",
           "type": "basic",
           "from": {
             "modifiers": {
@@ -62,13 +59,9 @@
               ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "description": "K3",
-      "manipulators": [
+        },
         {
+          "description": "K3",
           "type": "basic",
           "from": {
             "modifiers": {
@@ -94,13 +87,9 @@
               ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "description": "K4",
-      "manipulators": [
+        },
         {
+          "description": "K4",
           "type": "basic",
           "from": {
             "modifiers": {},
@@ -130,13 +119,9 @@
           "parameters": {
             "basic.to_if_alone_timeout_milliseconds": 250
           }
-        }
-      ]
-    },
-    {
-      "description": "K5",
-      "manipulators": [
+        },
         {
+          "description": "K5",
           "type": "basic",
           "from": {
             "modifiers": {},
@@ -166,13 +151,9 @@
           "parameters": {
             "basic.to_if_alone_timeout_milliseconds": 250
           }
-        }
-      ]
-    },
-    {
-      "description": "K6",
-      "manipulators": [
+        },
         {
+          "description": "K6",
           "type": "basic",
           "from": {
             "modifiers": {},
@@ -202,13 +183,9 @@
           "parameters": {
             "basic.to_if_alone_timeout_milliseconds": 250
           }
-        }
-      ]
-    },
-    {
-      "description": "K7",
-      "manipulators": [
+        },
         {
+          "description": "K7",
           "type": "basic",
           "from": {
             "modifiers": {
@@ -220,7 +197,10 @@
           },
           "to": [
             {
-              "key_code": "g"
+              "key_code": "grave_accent_and_tilde",
+              "modifiers": [
+                "left_control"
+              ]
             }
           ],
           "conditions": [
@@ -234,13 +214,9 @@
               ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "description": "K8",
-      "manipulators": [
+        },
         {
+          "description": "K8",
           "type": "basic",
           "from": {
             "modifiers": {
@@ -269,13 +245,9 @@
               ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "description": "K9",
-      "manipulators": [
+        },
         {
+          "description": "K9",
           "type": "basic",
           "from": {
             "modifiers": {
@@ -304,13 +276,9 @@
               ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "description": "K10",
-      "manipulators": [
+        },
         {
+          "description": "K10",
           "type": "basic",
           "from": {
             "modifiers": {
@@ -329,6 +297,71 @@
               "modifiers": [
                 "left_command"
               ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 10429,
+                  "product_id": 514
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "ACK05 Wheel",
+      "manipulators": [
+        {
+          "description": "Left",
+          "type": "basic",
+          "from": {
+            "modifiers": {
+              "mandatory": [
+                "left_control"
+              ]
+            },
+            "key_code": "keypad_hyphen"
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "vertical_wheel": -128.0
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 10429,
+                  "product_id": 514
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "description": "Right",
+          "type": "basic",
+          "from": {
+            "modifiers": {
+              "mandatory": [
+                "left_control"
+              ]
+            },
+            "key_code": "keypad_plus"
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "vertical_wheel": 128.0
+              }
             }
           ],
           "conditions": [
